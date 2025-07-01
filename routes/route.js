@@ -4,3 +4,8 @@ const productRoute = require("../routes/product.routes");
 
 
 router.use("/products",productRoute);
+
+
+module.exports= router;
+
+
