@@ -9,9 +9,11 @@ app.use('/api', router);
 
 // Global error handler
 app.use(errorHandler);
+
+
 app.get('/test', (req, res) => res.send('Hello world'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT ;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
