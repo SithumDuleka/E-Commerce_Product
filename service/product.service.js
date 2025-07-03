@@ -60,7 +60,6 @@ exports.update = async (id, data) => {
       base_price: data.base_price,
       thumbnail: data.thumbnail,
       label: data.label
-      // Note: this doesn't update variants — handle that separately if needed
     },
     include: { variant: true }
   });

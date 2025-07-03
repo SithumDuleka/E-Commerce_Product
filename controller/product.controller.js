@@ -14,4 +14,34 @@ const getByID = async (req, res) => {
   res.status(200).json({ data: product });
 };
 
-module.exports ={getAll,getByID};
+const createProduct = async (req, res) => {
+  try {
+    console.log("Incoming data:", req.body); 
+    const product = await productService.create(req.body);
+    res.status(201).json(product);
+  } catch (err) {
+    console.error("Error creating product:", err);
+    res
+      .status(500)
+      .json({ message: "Failed to create product", error: err.message });
+  }
+};
+const updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updated = await productService.update(id, req.body);
+    res.status(200).json(updated);
+  } catch (err) {
+    console.error("Error updating product:", err);
+    res
+      .status(err.status || 500)
+      .json({ message: err.message || "Failed to update product" });
+  }
+};
+
+module.exports = {
+  getAll,
+  getByID,
+  createProduct,
+  updateProduct,
+};
