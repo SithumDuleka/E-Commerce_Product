@@ -1,44 +1,33 @@
-# 🛒 E-Commerce Product Frontend
+# 🛠️ E-Commerce Product Backend
 
-This is a simple and responsive e-commerce frontend built with **React + Vite**, allowing users to browse products, view product variants, and manage products through an admin pop-up interface.
+This is the backend service for the E-Commerce Product application, built with **Node.js**, **Express.js**, and **Prisma ORM**. It exposes a RESTful API to manage products and their variants, and is deployed on **Railway** with a **PostgreSQL** database hosted via **Supabase**.
 
-> 🚀 Hosted on [Vercel](https://vercel.com/)  
-> 🔗 Backend Repo: [E-Commerce Product Backend](https://github.com/SithumDuleka/E-Commerce_Product.git)
-
----
-
-## ✨ Features
-
-- View all products on the landing page
-- View detailed product variants (with price, stock, and size filtering)
-- Add and update products through a modal form
-- Filter variants by size
-- Responsive and fast user experience using Vite
-- Supabase integration for database and storage
+> 🔗 Frontend Repo: [E-Commerce Product Frontend](https://github.com/SithumDuleka/E-Commerce_Product_Frontend.git)
 
 ---
 
-## 🖼️ UI Preview
+## 🚀 Features
 
-![Landing Page](https://your-image-link.com)
-![Product Variants](https://your-image-link.com)
-
-*(Add screenshots if available)*
-
----
-
-## 🔧 Tech Stack
-
-| Frontend     | Hosting     | Integration     |
-|--------------|-------------|-----------------|
-| React + Vite | Vercel      | Supabase (PostgreSQL) |
+- RESTful API with endpoints for:
+  - Creating, updating, and fetching products
+  - Managing product variants (sizes, prices, stock)
+- Layered architecture for scalability and maintainability
+- Prisma for database schema and queries
+- Supabase PostgreSQL integration
+- Deployed on Railway
 
 ---
 
-## 🛠️ Getting Started
+## 🧰 Tech Stack
 
-### 1. Clone the repository
+| Component     | Technology       |
+|---------------|------------------|
+| Language       | Node.js (JavaScript) |
+| Framework      | Express.js       |
+| ORM            | Prisma           |
+| Database       | PostgreSQL (Supabase) |
+| Hosting        | Railway          |
 
-```bash
-git clone https://github.com/SithumDuleka/E-Commerce_Product_Frontend.git
-cd E-Commerce_Product_Frontend
+---
+
+## 📁 Project Structure
